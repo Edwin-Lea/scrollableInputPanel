@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIButton *voiceBtn;
-@property (weak, nonatomic) IBOutlet UIButton *presentBtn;
+
 @end

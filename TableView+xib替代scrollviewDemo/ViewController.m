@@ -11,6 +11,8 @@
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView* tableView;
+@property (weak, nonatomic) IBOutlet UIButton* voiceBtn;
+@property (weak, nonatomic) IBOutlet UIButton* presentBtn;
 
 @end
 
@@ -38,6 +40,25 @@
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     //隐藏滚动条
     self.tableView.showsVerticalScrollIndicator = NO;
+
+    //设置按钮的具体风格
+    [self.voiceBtn setBackgroundColor:[UIColor colorWithRed:0 / 255.0 green:0 / 255.0 blue:0 / 255.0 alpha:0.5]];
+    [_voiceBtn setTitle:@"按住 说话" forState:UIControlStateNormal];
+    //添加点击事件
+    [_voiceBtn addTarget:self action:@selector(voiceClick) forControlEvents:UIControlEventTouchUpInside];
+    [_voiceBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    //设置边框
+    _voiceBtn.layer.borderWidth = 1;
+    _voiceBtn.layer.borderColor = [UIColor whiteColor].CGColor;
+
+    [self.presentBtn setBackgroundColor:[UIColor colorWithRed:0 / 255.0 green:0 / 255.0 blue:0 / 255.0 alpha:0.5]];
+    [_presentBtn setTitle:@"提交" forState:UIControlStateNormal];
+    //添加点击事件
+    [_presentBtn addTarget:self action:@selector(presentClick) forControlEvents:UIControlEventTouchUpInside];
+    [_presentBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    //设置边框
+    _presentBtn.layer.borderWidth = 1;
+    _presentBtn.layer.borderColor = [UIColor whiteColor].CGColor;
 }
 #pragma mark----tableView的代理方法----
 - (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section
@@ -52,24 +73,6 @@
     cell.backgroundColor = [UIColor colorWithRed:255 / 255.0f green:255 / 255.0f blue:255 / 255.0f alpha:0];
     //设置tableView的cell不可点击
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    //设置cell最下边两个按钮的具体风格
-    [cell.voiceBtn setBackgroundColor:[UIColor colorWithRed:0 / 255.0 green:0 / 255.0 blue:0 / 255.0 alpha:0.5]];
-    [cell.voiceBtn setTitle:@"按住 说话" forState:UIControlStateNormal];
-    //添加点击事件
-    [cell.voiceBtn addTarget:self action:@selector(voiceClick) forControlEvents:UIControlEventTouchUpInside];
-    [cell.voiceBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    //设置边框
-    cell.voiceBtn.layer.borderWidth = 1;
-    cell.voiceBtn.layer.borderColor = [UIColor whiteColor].CGColor;
-
-    [cell.presentBtn setBackgroundColor:[UIColor colorWithRed:0 / 255.0 green:0 / 255.0 blue:0 / 255.0 alpha:0.5]];
-    [cell.presentBtn setTitle:@"提交" forState:UIControlStateNormal];
-    //添加点击事件
-    [cell.presentBtn addTarget:self action:@selector(presentClick) forControlEvents:UIControlEventTouchUpInside];
-    [cell.presentBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    //设置边框
-    cell.presentBtn.layer.borderWidth = 1;
-    cell.presentBtn.layer.borderColor = [UIColor whiteColor].CGColor;
 
     return cell;
 }
