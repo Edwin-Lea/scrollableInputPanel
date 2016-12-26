@@ -23,10 +23,12 @@
     [super viewDidLoad];
     //背景图片
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_dark"]]];
-    [self setup];
+
     //设置tableView代理方法
     _tableView.delegate = self;
     _tableView.dataSource = self;
+
+    [self setup];
 }
 - (void)setup
 {

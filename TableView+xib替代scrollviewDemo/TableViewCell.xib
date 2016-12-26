@@ -205,7 +205,7 @@
                     <constraint firstItem="BN5-07-wfq" firstAttribute="trailing" secondItem="uvr-Ju-WH8" secondAttribute="trailing" id="zxw-Lp-lU1"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="323.5" y="367.5"/>
+            <point key="canvasLocation" x="344.5" y="380.5"/>
         </tableViewCell>
     </objects>
 </document>
