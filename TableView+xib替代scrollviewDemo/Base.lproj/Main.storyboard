@@ -35,14 +35,6 @@
                                     <constraint firstAttribute="height" constant="1" id="UPO-CD-V3C"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bca-io-dn0">
-                                <rect key="frame" x="210" y="504" width="90" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="eeI-OA-5IN"/>
-                                    <constraint firstAttribute="height" constant="44" id="gux-8T-bgm"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q5H-YD-FXX">
                                 <rect key="frame" x="0.0" y="65" width="320" height="503"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -52,6 +44,14 @@
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="PdI-f2-iR2"/>
                                     <constraint firstAttribute="height" constant="44" id="psi-hH-h36"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bca-io-dn0">
+                                <rect key="frame" x="210" y="504" width="90" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="eeI-OA-5IN"/>
+                                    <constraint firstAttribute="height" constant="44" id="gux-8T-bgm"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                             </button>
