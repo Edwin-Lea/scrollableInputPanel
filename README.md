@@ -1,0 +1,4 @@
+# scrollableInputPanel
+iOS支持上下滚动的多输入框面板
+
+UITableView+xib替代UIScrollView上下滚动适配所有手机屏幕 
